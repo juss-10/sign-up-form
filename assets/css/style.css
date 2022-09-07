@@ -132,6 +132,10 @@ a {
     margin-bottom: 2em;
 }
 
+.form-control {
+    width: 100%;
+}
+
 .form-control,
 .form-control:last-child {
     margin-bottom: 2.5em;
@@ -277,4 +281,41 @@ main {
 
 .bg-image {
     display: block;
+}
+
+@media (min-width: 550px) {
+    .main-header {
+        margin-bottom: 3em;
+    }
+  
+    .small-screen.bg-image {
+        background: none;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .bg-image {
+        display: block;
+        background: url("../images/signup-background.jpg") right center / cover no-repeat green;
+        flex: 1;
+    }
+
+    .form-control {
+        width: calc(50% - 1em);
+        margin-bottom: 0;
+    }
+
+    .form-controls {
+        gap: 1em;
+    }
+}
+
+@media (min-width: 800px) {
+    .main-content {
+        max-width: 850px;
+    }
+
+    .form-control {
+        width: calc(33% - 1em);
+    }
 }
