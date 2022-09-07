@@ -1,0 +1,280 @@
+:root {
+    --bg-color-main: rgb(46, 30, 30);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    background-color: rgb(46, 30, 30);
+    background-color: var(--bg-color-main);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* TYPOGRAPHY */
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    margin-bottom: 1.5em;
+}
+
+/* Links */
+
+a {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    border-bottom: 0.1em solid rgb(255, 255, 255);
+}
+
+.text-small {
+    font-size: 0.875rem;
+}
+
+/* LAYOUT: MOBILE */
+
+.container-full {
+    width: 100%;
+}
+
+.container {
+    width: calc(100% - 4rem);
+    padding: 1.25em 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-content {
+    width: 100%;
+    background-color: rgb(46, 30, 30);
+    background-color: var(--bg-color-main);
+}
+
+.container :first-child,
+.container-full :first-child {
+    margin-top: 0;
+}
+
+.container :last-child,
+.container-full :last-child {
+    margin-bottom: 0;
+}
+
+.vh-min-100 {
+    min-height: 100vh;
+}
+
+.height-100 {
+    height: 100%
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.list-unstyled {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2em;
+    list-style: none;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.gap-small {
+    gap: 2em;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+/* form elements */
+
+.sign-up-form {
+    margin-bottom: 2em;
+}
+
+.form-control,
+.form-control:last-child {
+    margin-bottom: 2.5em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4em;
+    letter-spacing: 0.03em;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+/* icons */
+
+.logo {
+    background: url("../images/nature-logo.svg") center / 100% no-repeat transparent;
+    width: 100px;
+    height: 50px;
+    text-indent: -9999px;
+}
+
+.input-wrapper::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 1.5em;
+    background-position: center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.user-icon::after {
+    background-image: url("../images/user.svg");
+}
+
+.email-icon::after {
+    background-image: url("../images/email.svg");
+}
+
+.phone-icon::after {
+    background-image: url("../images/phone.svg");
+}
+
+.password-icon::after {
+    background-image: url("../images/password.svg");
+}
+
+input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    font-size: 0.875rem;
+    border: 1px solid rgb(88, 61, 61);
+    background-color: transparent;
+    width: 100%;
+    padding: 1em;
+}
+
+input::placeholder {
+    color: rgb(209, 173, 173);
+}
+
+input:hover {
+    background-color: rgb(68, 46, 46);
+    border-color: rgb(177, 138, 138);
+}
+
+input:focus {
+    background-color: rgb(102, 72, 72);
+    border-color: rgb(177, 138, 138);
+}
+
+/* Buttons */
+
+button {
+    cursor: pointer;
+    font-size: inherit;
+    color: rgb(255, 255, 255);
+    background-color: rgb(89, 109, 72);
+    border: 1px solid rgb(106, 125, 89);
+    border-radius: 3px;
+    padding: 1em;
+    position: relative;
+}
+
+button:focus,
+button:hover {
+    background-color: #6D8657;
+}
+
+button:active {
+    background-color: #4B5C3D;
+    top: 2px;
+}
+
+main {
+    margin-bottom: 3em;
+}
+
+/* Headers */
+
+.main-header {
+    background-color: rgb(89, 109, 72);
+}
+
+.small-screen.bg-image {
+    margin-bottom: 3em;
+    background: url("../images/signup-background.jpg") center / cover no-repeat rgb(106, 125, 89);
+    padding: 7vh;
+}
+
+.content-header {
+    border-bottom: 1px solid rgb(102, 72, 72);
+    margin-bottom: 2em;
+}
+
+/* Footer */
+
+.main-footer {
+    border-top: 1px solid rgb(86, 60, 60);
+    margin-top: auto;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.bg-image {
+    display: none;
+}
+
+/* LAYOUT: LARGER SCREENS */
+
+.bg-image {
+    display: block;
+}
