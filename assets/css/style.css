@@ -41,16 +41,20 @@ h2 {
     margin-bottom: 1.5em;
 }
 
+.text-small {
+    font-size: 0.875rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
 /* Links */
 
 a {
     color:rgb(255, 255, 255);
     text-decoration: none;
     border-bottom: 0.1em solid rgb(255, 255, 255);
-}
-
-.text-small {
-    font-size: 0.875rem;
 }
 
 /* LAYOUT: MOBILE */
@@ -260,6 +264,7 @@ main {
 .content-header {
     border-bottom: 1px solid rgb(102, 72, 72);
     margin-bottom: 2em;
+    padding-bottom: 2em;
 }
 
 /* Footer */
@@ -284,21 +289,7 @@ main {
 }
 
 @media (min-width: 550px) {
-    .main-header {
-        margin-bottom: 3em;
-    }
-  
-    .small-screen.bg-image {
-        background: none;
-        margin-bottom: 0;
-        padding: 0;
-    }
-
-    .bg-image {
-        display: block;
-        background: url("../images/signup-background.jpg") right center / cover no-repeat green;
-        flex: 1;
-    }
+    
 
     .form-control {
         width: calc(50% - 1em);
@@ -312,10 +303,26 @@ main {
 
 @media (min-width: 800px) {
     .main-content {
-        max-width: 850px;
+        max-width: 800px;
     }
 
     .form-control {
         width: calc(33% - 1em);
+    }
+
+    .main-header {
+        margin-bottom: 3em;
+    }
+  
+    .small-screen.bg-image {
+        background: none;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .bg-image {
+        display: block;
+        background: url("../images/signup-background.jpg") right center / cover no-repeat rgb(255, 255, 255);
+        flex: 1;
     }
 }
