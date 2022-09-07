@@ -70,7 +70,7 @@ a {
     margin-right: auto;
 }
 
-.main-content {
+.main-container {
     width: 100%;
     background-color: rgb(46, 30, 30);
     background-color: var(--bg-color-main);
@@ -128,6 +128,11 @@ a {
 
 .jc-sb {
     justify-content: space-between;
+}
+
+.middle {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* form elements */
@@ -289,8 +294,6 @@ main {
 }
 
 @media (min-width: 550px) {
-    
-
     .form-control {
         width: calc(50% - 1em);
         margin-bottom: 0;
@@ -301,9 +304,13 @@ main {
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
+    .main-container {
+        width: max(1000px, 50%);
+    }
+
     .main-content {
-        max-width: 800px;
+        max-width: 1400px;
     }
 
     .form-control {
