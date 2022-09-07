@@ -187,18 +187,22 @@ label {
 
 .user-icon::after {
     background-image: url("../images/user.svg");
+    pointer-events: none;
 }
 
 .email-icon::after {
     background-image: url("../images/email.svg");
+    pointer-events: none;
 }
 
 .phone-icon::after {
     background-image: url("../images/phone.svg");
+    pointer-events: none;
 }
 
 .password-icon::after {
     background-image: url("../images/password.svg");
+    pointer-events: none;
 }
 
 input {
@@ -206,11 +210,14 @@ input {
     -webkit-appearance: none;
     appearance: none;
     outline: none;
+    color: rgb(255, 255, 255);
     font-size: 0.875rem;
     border: 1px solid rgb(88, 61, 61);
     background-color: transparent;
     width: 100%;
     padding: 1em;
+    padding-right: 3em;
+    transition: background-color 0.2s ease-in;
 }
 
 input::placeholder {
