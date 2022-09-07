@@ -284,14 +284,10 @@ main {
 }
 
 .bg-image {
-    display: none;
+    display: block;
 }
 
 /* LAYOUT: LARGER SCREENS */
-
-.bg-image {
-    display: block;
-}
 
 @media (min-width: 550px) {
     .form-control {
@@ -328,7 +324,6 @@ main {
     }
 
     .bg-image {
-        display: block;
         background: url("../images/signup-background.jpg") right center / cover no-repeat rgb(255, 255, 255);
         flex: 1;
     }
