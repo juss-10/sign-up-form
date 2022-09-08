@@ -144,6 +144,10 @@ function closeModal() {
 }
 
 function resetForm() {
-    inputs.forEach(input => input.value = "")
+    inputs.forEach(input => {
+        input.value = "";
+        removeIconClasses(input.parentElement)
+    })
     hasConfirmedPassword = false;
+    passwordConfirmation.disabled = true;
 }
