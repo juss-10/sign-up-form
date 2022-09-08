@@ -35,7 +35,7 @@
                                     <li class="form-control">
                                         <label for="username">Username</label>
                                         <div class="input-wrapper user-icon">
-                                            <input type="text" name="username" id="username" placeholder="Pick a username">
+                                            <input type="text" name="username" id="username" placeholder="Pick a username" pattern="^(?=[a-zA-Z0-9._]{5,20}$)(?!.*[_.]{2})[^_.].*[^_.]$">
                                         </div>
                                     </li>
                                     <li class="form-control">
@@ -47,22 +47,38 @@
                                     <li class="form-control">
                                         <label for="phone-number">Phone number</label>
                                         <div class="input-wrapper phone-icon">
-                                            <input type="tel" name="phone-number" id="phone-number" placeholder="555-123-4567">
+                                            <input type="tel" name="phone-number" id="phone-number" placeholder="555-123-4567" pattern="\d{3}[\-]?\d{3}[\-]?\d{4}">
                                         </div>
                                     </li>
                                     <li class="form-control">
                                         <label for="password">Password</label>
                                         <div class="input-wrapper password-icon">
-                                            <input type="password" name="password" id="password" placeholder="Choose a password">
+                                            <input type="password" name="password" id="password" placeholder="Choose a password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
                                         </div>
                                     </li>
                                     <li class="form-control">
                                         <label for="confirm-password">Confirm password</label>
                                         <div class="input-wrapper password-icon">
-                                            <input type="password" name="confirm-password" id="confirm-password" placeholder="Type your password again">
+                                            <input type="password" name="confirm-password" id="confirm-password" placeholder="Type your password again" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" disabled>
                                         </div>
                                     </li>
                                 </ul>
+
+                                <div class="container-full popup" id="password-popup">
+                                    <div class="container-full popup-title-container">
+                                        <h3>Choose a strong password</h3>
+                                    </div>
+                                    <div class="container-full space">
+                                        <ul>
+                                            <li>at least 1 lowercase letter</li>
+                                            <li>at least 1 uppercase letter</li>
+                                            <li>at least 1 number</li>
+                                            <li>at least 1 special character <span class="tip">@$!%*?&</span></li>
+                                            <li>at least 8 characters</li>
+                                            <li>maximum of 16 characters</li>
+                                        </ul>
+                                    </div>
+                                </div>
 
                                 <div class="container-full col ai-c">
                                     <button type="button" class="btn-res">Create your account</button>

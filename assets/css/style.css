@@ -76,6 +76,34 @@ a {
     background-color: var(--bg-color-main);
 }
 
+.popup {
+    border: 1px solid rgb(102, 72, 72);
+    margin-bottom: 4em;
+}
+
+.popup-title-container {
+    background-color: rgb(102, 72, 72);
+    padding: 1em;
+}
+
+.tip {
+    color: rgb(163, 128, 128);
+    border: 1px solid rgb(102, 72, 72);
+    margin: 0 0.25em;
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    border-radius: 0.3em;
+    letter-spacing: 0.25ch;
+}
+
+#password-popup {
+    display: none;
+}
+
+.visible#password-popup {
+    display: block;
+}
+
 .container :first-child,
 .container-full :first-child {
     margin-top: 0;
@@ -84,6 +112,11 @@ a {
 .container :last-child,
 .container-full :last-child {
     margin-bottom: 0;
+}
+
+.space {
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .vh-min-100 {
@@ -179,26 +212,23 @@ label {
     background-size: 16px;
     background-repeat: no-repeat;
     background-color: transparent;
+    pointer-events: none;
 }
 
 .user-icon::after {
     background-image: url("../images/user.svg");
-    pointer-events: none;
 }
 
 .email-icon::after {
     background-image: url("../images/email.svg");
-    pointer-events: none;
 }
 
 .phone-icon::after {
     background-image: url("../images/phone.svg");
-    pointer-events: none;
 }
 
 .password-icon::after {
     background-image: url("../images/password.svg");
-    pointer-events: none;
 }
 
 input {
