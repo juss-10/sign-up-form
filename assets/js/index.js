@@ -1,7 +1,11 @@
-const inputs = document.querySelectorAll(".sign-up-form input");
+const inputs = [...document.querySelectorAll(".sign-up-form input")];
 const firstPassword = document.querySelector("#password");
 const passwordConfirmation = document.querySelector("#confirm-password");
 const passwords = [firstPassword, passwordConfirmation];
+const form = document.querySelector("#form");
+const modal = document.querySelector(".modal");
+const closeModalBtn = document.querySelector(".close-modal");
+let hasConfirmedPassword = false;
 
 inputs.forEach(input => input.addEventListener("keyup", e => {
     removeWhitespace(e)
@@ -9,8 +13,23 @@ inputs.forEach(input => input.addEventListener("keyup", e => {
 }))
 
 firstPassword.addEventListener("input", showPasswordPopup)
-
 inputs.forEach(input => input.addEventListener("focusout", e => inputHandler(e)))
+form.addEventListener("submit", e => {
+    e.preventDefault()
+
+    const isValidForm = inputs.every(input => {
+        return input.validity.valid && hasConfirmedPassword
+    })
+
+    if (isValidForm) {
+        showModal()
+    }
+})
+
+closeModalBtn.addEventListener("click", () => {
+    resetForm()
+    closeModal()
+})
 
 function inputHandler(e) {
     const input = {
@@ -63,7 +82,7 @@ function validate({ valid, hasFocus, parent }) {
 
 function validateConfirmation({ hasFocus, parent }) {
 
-    const hasConfirmedPassword = firstPassword.value === passwordConfirmation.value;
+    hasConfirmedPassword = firstPassword.value === passwordConfirmation.value;
 
     if (hasConfirmedPassword) {
         setIcon(parent, "valid")
@@ -114,4 +133,17 @@ function showPasswordPopup() {
 
 function removeWhitespace(e) {
     e.currentTarget.value = e.currentTarget.value.trim();
+}
+
+function showModal() {
+    modal.classList.add("visible")
+}
+
+function closeModal() {
+    modal.classList.remove("visible")
+}
+
+function resetForm() {
+    inputs.forEach(input => input.value = "")
+    hasConfirmedPassword = false;
 }

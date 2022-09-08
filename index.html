@@ -8,6 +8,12 @@
     <script src="assets/js/index.js" defer></script>
 </head>
 <body>
+    <div class="modal">
+        <div class="modal-content">
+            <p>Form submitted</p>
+            <button type="button" class="close-modal">Sign up again</button>
+        </div>
+    </div>
     <div class="container-full vh-min-100">
         <div class="row vh-min-100">
             <div class="col vh-min-100 large-screen bg-image"></div>
@@ -30,37 +36,37 @@
                                 <h1>Create your account</h1>
                                 <p>Sed scelerisque venenatis bibendum. Praesent quis justo luctus, molestie tellus in, consectetur leo. Aenean ut est sit amet lectus dapibus scelerisque. Cras a diam at ante pharetra tristique quis eu nulla.</p>
                             </header>
-                            <form class="sign-up-form">
+                            <form class="sign-up-form" id="form">
                                 <h2>Your details</h2>
                                 <ul class="list-unstyled row wrap form-controls">
                                     <li class="form-control">
                                         <label for="username">Username</label>
                                         <div class="input-wrapper user-icon">
-                                            <input type="text" name="username" id="username" placeholder="Pick a username" pattern="^(?=[a-zA-Z0-9._]{5,20}$)(?!.*[_.]{2})[^_.].*[^_.]$">
+                                            <input type="text" name="username" id="username" placeholder="Pick a username" pattern="^(?=[a-zA-Z0-9._]{5,20}$)(?!.*[_.]{2})[^_.].*[^_.]$" required>
                                         </div>
                                     </li>
                                     <li class="form-control">
                                         <label for="email">Email</label>
                                         <div class="input-wrapper email-icon">
-                                            <input type="email" name="email" id="email" placeholder="me@example.com">
+                                            <input type="email" name="email" id="email" placeholder="me@example.com" required>
                                         </div>
                                     </li>
                                     <li class="form-control">
                                         <label for="phone-number">Phone number</label>
                                         <div class="input-wrapper phone-icon">
-                                            <input type="tel" name="phone-number" id="phone-number" placeholder="555-123-4567" pattern="\d{3}[\-]?\d{3}[\-]?\d{4}">
+                                            <input type="tel" name="phone-number" id="phone-number" placeholder="555-123-4567" pattern="\d{3}[\-]?\d{3}[\-]?\d{4}" required>
                                         </div>
                                     </li>
                                     <li class="form-control">
                                         <label for="password">Password</label>
                                         <div class="input-wrapper password-icon">
-                                            <input type="password" name="password" id="password" placeholder="Choose a password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+                                            <input type="password" name="password" id="password" placeholder="Choose a password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
                                         </div>
                                     </li>
                                     <li class="form-control">
                                         <label for="confirm-password">Confirm password</label>
                                         <div class="input-wrapper password-icon">
-                                            <input type="password" name="confirm-password" id="confirm-password" placeholder="Type your password again" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" disabled>
+                                            <input type="password" name="confirm-password" id="confirm-password" placeholder="Type your password again" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" disabled required>
                                         </div>
                                     </li>
                                 </ul>
@@ -82,7 +88,7 @@
                                 </div>
 
                                 <div class="container-full col ai-c">
-                                    <button type="button" class="btn-res">Create your account</button>
+                                    <button type="submit" class="btn-res">Create your account</button>
                                     <p class="text-small text-center">This is not a real service.<br>No account will be created.</p>
                                 </div>
                             </form>

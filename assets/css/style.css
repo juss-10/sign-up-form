@@ -272,6 +272,36 @@ input:focus {
     border-color: rgb(177, 138, 138);
 }
 
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.modal-content {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.visible.modal {
+    display: flex;
+}
+
 /* Buttons */
 
 button {
