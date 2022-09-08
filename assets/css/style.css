@@ -231,6 +231,18 @@ label {
     background-image: url("../images/password.svg");
 }
 
+.input-wrapper.valid::after {
+    background-image: url("../images/valid.svg");
+}
+
+.input-wrapper.invalid::after {
+    background-image: url("../images/invalid.svg");
+}
+
+.input-wrapper.indeterminate::after {
+    background-image: url("../images/indeterminate.svg");
+}
+
 input {
     -moz-appearance: none;
     -webkit-appearance: none;
